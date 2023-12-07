@@ -57,6 +57,36 @@
             </tr>
         </table>
 
+        <form>
+            <ul>
+                <li>
+                    <input type="checkbox" name="services" value="transfer" data-price="100">
+                    <label>Трансфер до места начала экскурсии</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="services" value="disabled_transfer" data-price="100">
+                    <label>Трансфер для людей из маломобильных групп населения</label>
+                </li>
+            </ul>
+        </form>
+        <p2 id="total-price">Сумма: 0 рублей</p2>
+            <script>
+                const checkboxes = document.querySelectorAll('input[name="services"]');
+                const totalPriceElement = document.getElementById('total-price');
+            
+                checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    let totalPrice = 0;
+                    checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        totalPrice += parseInt(checkbox.getAttribute('data-price'));
+                    }
+                    });
+                    totalPriceElement.textContent = `Сумма: ${totalPrice} рублей`;
+                });
+                });
+            </script>
+
         <h2>Отзывы участников</h2>
         <figure>
         <img src="images/5.png"
@@ -93,7 +123,14 @@
         <form>
             <input type="text" placeholder="Имя"><br>
             <input type="text" placeholder="Фамилия"><br>
+            <button type="submit">Отправить</button>
         </form>
+
+        <select name="tariff" id="tariff">
+            <label for="tariff">Выберите тариф</label>
+            <option value="economy">Эконом</option>
+            <option value="comfort">Комфорт</option>
+        </select>
 
         <a href="https://t.me/edusondaily">Свяжитесь с автором экскурсии</a>
     </body>
