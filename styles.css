@@ -27,6 +27,7 @@
     margin: 0;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
+    line-height: 1.4;
     color: #000;
 }
 
@@ -41,11 +42,34 @@
     padding: 20px 0;
 }
 
+.navbar-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navbar-link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    opacity: 0.5;
+}
+
 .intro {
     min-height: 610px;
     background-image: url('./images/intro.png');
     background-size: cover;
     background-position: center;
+    background-color: #242424;
     color: #fff;
     padding-top: 180px;
     padding-bottom: 120px;
@@ -81,6 +105,10 @@
     grid-template-columns: 1fr 260px;
 }
 
+.page-main-column {
+    background-color: #fff;
+}
+
 .page-section {
     position: relative;
     padding: 40px 80px 40px 0;
@@ -93,6 +121,7 @@
     right: 0;
     bottom: 0;
     width: 9999px;
+    background-color: #f2f2f2;
 }
 
 .program-title {
@@ -215,6 +244,7 @@
 
 .prices-table th {
     padding: 20px;
+    background-color: #242424;
     font-weight: 700;
     color: #fff;
     text-align: left;
@@ -224,6 +254,11 @@
     padding: 20px;
     font-size: 16px;
 }
+
+.prices-table tr:nth-child(odd) td {
+    background-color: #f2f2f2;
+}
+
 
 .prices-table th:first-child,
 .prices-table td:first-child {
@@ -287,6 +322,7 @@
     margin-top: auto;
     padding: 20px;
     border-radius: 15px;
+    background-color: #242424;
     color: #fff;
     font-size: 20px;
     font-weight: 700;
@@ -311,6 +347,7 @@
     gap: 40px;
     padding: 20px 80px 20px 40px;
     border-radius: 20px;
+    background-color: #f8f8f8
 }
 
 .reviews-item:not(:last-child) {
@@ -360,6 +397,7 @@
 .contacts-content {
     padding: 20px 280px 20px 40px;
     border-radius: 20px;
+    background-color: #f8f8f8;
 }
 
 .contacts-text-wrapper {
@@ -397,6 +435,7 @@
     padding: 20px 40px;
     padding-right: 80px;
     border-radius: 15px;
+    background-color: #242424;
     color:#fff;
     font-size: 40px;
     font-weight: 700;
@@ -426,6 +465,7 @@
 
 .sidebar {
     padding: 40px 0 40px 20px;
+    background-color: #242424;
     color: #fff;
 }
 
@@ -483,6 +523,7 @@
 
 .page-footer {
     padding: 30px 0;
+    background-color: #242424;
     color: #fff;
 }
 
